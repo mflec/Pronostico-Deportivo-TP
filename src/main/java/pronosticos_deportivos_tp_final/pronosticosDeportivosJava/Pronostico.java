@@ -16,21 +16,27 @@ public class Pronostico {
 	public Pronostico(Partido partido) {
 		this.partido = partido;
 		this.resultado = partido.resultado();
+		this.equipo = null;
 	}
 
 	public int puntos() {
-		if (equipo == null) {
-			if(resultado.empate) {				
-				System.out.print("Acertó. Hubo un empate\n");
+		System.out.print(partido.getEquipo1().getNombre() + " vs " + partido.getEquipo2().getNombre() + ": ");
+		if (this.resultado.empate) {
+			if (this.equipo == null) {
+				System.out.println("Acertó. Hubo un empate");
 				return 1;
+			} else {
+				System.out.println("No acertó. Hubo un empate." + " No ganó " + equipo.getNombre());
+				return 0;
 			}
-			System.out.print("No acertó. No hubo un empate\n");
+		} else if (this.equipo == null && !this.resultado.empate) {
+			System.out.println("No acertó. No hubo un empate");
 			return 0;
 		} else if (resultado.ganador.equals(equipo)) {
-			System.out.print("Acertó. El ganador es " + equipo.getNombre() + "\n");
+			System.out.println("Acertó. El ganador es " + equipo.getNombre());
 			return 1;
 		} else {
-			System.out.print("No acertó. Pierde " + equipo.getNombre() + "\n");
+			System.out.println("No acertó. El perdedor es " + equipo.getNombre());
 			return 0;
 		}
 	}

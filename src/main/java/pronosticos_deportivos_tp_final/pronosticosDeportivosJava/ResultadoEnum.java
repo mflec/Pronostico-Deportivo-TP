@@ -14,8 +14,10 @@ public class ResultadoEnum extends Partido {
 
 	public Equipo getGanador() {
 		if (this.getGolesEquipo1() > this.getGolesEquipo2()) {
+			this.empate = false;
 			return this.getEquipo1();
 		} else if (this.getGolesEquipo1() < this.getGolesEquipo2()) {
+			this.empate = false;
 			return this.getEquipo2();
 		} else {
 			this.empate = true;
