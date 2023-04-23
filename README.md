@@ -13,4 +13,9 @@ También se pueden mandar como argumento, un archivo csv con resultados y un arc
 
 ![image](https://user-images.githubusercontent.com/80794759/233818837-ea8ab83c-16bd-4e36-8bdb-f51fe66355ad.png)
 
+Archivos CSV utiles para usar de ejemplo:
+
+[Resultados](https://github.com/mflec/Pronostico-Deportivo-TP/blob/master/data/example/resultados.csv)
+[Pronosticos](https://github.com/mflec/Pronostico-Deportivo-TP/blob/master/data/example/pronostico.csv)
+
 El programa retorna los resultados de cada pronostico y el total de los puntos acumulados
