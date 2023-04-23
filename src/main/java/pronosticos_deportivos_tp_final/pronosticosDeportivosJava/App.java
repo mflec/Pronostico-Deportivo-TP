@@ -17,7 +17,7 @@ public class App {
 
 	public static void main(String[] args) {
 		try {
-			String rutaArchivoConfiguracion = "C:\\Users\\MILI\\Documents\\configBD.txt";//args[0];
+			String rutaArchivoConfiguracion = args[0];
 		    
 			// Lee el archivo de configuración
 			BufferedReader br = new BufferedReader(new FileReader(rutaArchivoConfiguracion));
