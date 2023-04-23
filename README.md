@@ -18,4 +18,4 @@ Archivos CSV utiles para usar de ejemplo:
 [Resultados](https://github.com/mflec/Pronostico-Deportivo-TP/blob/master/data/example/resultados.csv)
 [Pronosticos](https://github.com/mflec/Pronostico-Deportivo-TP/blob/master/data/example/pronostico.csv)
 
-El programa retorna los resultados de cada pronostico y el total de los puntos acumulados
+El programa imprime en consola los resultados de cada pronostico y el total de los puntos acumulados
