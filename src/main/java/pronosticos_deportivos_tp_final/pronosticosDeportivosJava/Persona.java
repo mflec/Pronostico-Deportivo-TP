@@ -19,13 +19,21 @@ public class Persona {
 		return this.nombre;
 	}
 	
-	public void getPronosticos() {
+	public void getPronosticos(int puntos, int puntosExtra) {
 		System.out.println("Pronosticos de "+ nombre);
 		for (Pronostico pronostico : pronosticos) {
-			this.puntosTotales=+ pronostico.puntos();
+			this.puntosTotales= this.puntosTotales + pronostico.puntos(puntos);
 		}
+		
+		int totalPronostico = pronosticos.size();
+		boolean totalAciertos = this.puntosTotales == totalPronostico;
+
+		if(totalAciertos) {
+			System.out.println("Acertó todos los pronosticos. Gana " + puntosExtra + " puntos.");
+			this.puntosTotales= this.puntosTotales + puntosExtra;
+		}
+		
 		System.out.println("Su puntuación total es " + this.puntosTotales);
-		System.out.println();
 		System.out.println();
 	};
 	

@@ -19,12 +19,12 @@ public class Pronostico {
 		this.equipo = null;
 	}
 
-	public int puntos() {
+	public int puntos(int puntos) {
 		System.out.print(partido.getEquipo1().getNombre() + " vs " + partido.getEquipo2().getNombre() + ": ");
 		if (this.resultado.empate) {
 			if (this.equipo == null) {
 				System.out.println("Acertó. Hubo un empate");
-				return 1;
+				return puntos;
 			} else {
 				System.out.println("No acertó. Hubo un empate." + " No ganó " + equipo.getNombre());
 				return 0;
@@ -34,7 +34,7 @@ public class Pronostico {
 			return 0;
 		} else if (resultado.ganador.equals(equipo)) {
 			System.out.println("Acertó. El ganador es " + equipo.getNombre());
-			return 1;
+			return puntos;
 		} else {
 			System.out.println("No acertó. El perdedor es " + equipo.getNombre());
 			return 0;
